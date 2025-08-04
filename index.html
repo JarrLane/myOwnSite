@@ -1,36 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The Jarrett Website</title>
-  <style>
-    .container {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-    }
-    .image {
-      width: 100%;
-      display: block;
-    }
-    .clickable {
-      position: absolute;
-      background-color: rgba(255, 0, 0, 0.2); 
-      cursor: pointer;
-    }
-    .text1 {
-      top: 20%;
-      left: 30%;
-      width: 100px;
-      height: 40px;
-    }
-  </style>
+  <title>Interactive Image</title>
 </head>
 <body>
 
-<div class="container">
-  <img src="personalwebrender3.png" alt="Interactive" class="image">
-  <div class="clickable text1" onclick="alert('You clicked Text 1')"></div>
-</div>
+<img src="personalwebrender3.png" usemap="#image-map" alt="Interactive Image" style="width:100%;">
+
+<map name="image-map">
+  <area target="" alt="Text1" title="Text1" href="https://example.com" coords="34,44,270,350" shape="rect">
+  <area target="" alt="Text2" title="Text2" onclick="alert('Clicked Text2!')" coords="300,200,400,300" shape="rect">
+</map>
 
 </body>
 </html>
