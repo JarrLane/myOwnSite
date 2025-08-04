@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Image</title>
+  <style>
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+    }
+    .image {
+      width: 100%;
+      display: block;
+    }
+    .clickable {
+      position: absolute;
+      background-color: rgba(255, 0, 0, 0.2); 
+      cursor: pointer;
+    }
+    .text1 {
+      top: 20%;
+      left: 30%;
+      width: 100px;
+      height: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <img src="your-image.jpg" alt="Interactive" class="image">
+  <div class="clickable text1" onclick="alert('You clicked Text 1')"></div>
+</div>
+
+</body>
+</html>
