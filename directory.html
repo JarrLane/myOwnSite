@@ -33,18 +33,22 @@
       cursor: pointer;
       background-color: rgba(255, 0, 0, 0.3); 
       transition: background-color 0.2s ease;
+      width: 20%;       /* width of each region */
+      height: 10%;      /* height of each region */
+      left: 40%;        /* center horizontally */
     }
 
     .clickable:hover {
       background-color: rgba(255, 0, 0, 0.5);
     }
 
-    .lobby { top: 10%; left: 10%; width: 15%; height: 15%; }
-    .cert { top: 10%; left: 30%; width: 15%; height: 15%; }
-    .resume { top: 10%; left: 50%; width: 15%; height: 15%; }
-    .github { top: 40%; left: 10%; width: 15%; height: 15%; }
-    .flag { top: 40%; left: 30%; width: 15%; height: 15%; }
-    .about { top: 40%; left: 50%; width: 15%; height: 15%; }
+    /* Stack regions vertically with spacing */
+    .lobby  { top: 10%; }
+    .cert   { top: 25%; }
+    .resume { top: 40%; }
+    .github { top: 55%; }
+    .flag   { top: 70%; }
+    .about  { top: 85%; }
 
   </style>
 </head>
@@ -53,13 +57,20 @@
 <div class="container">
   <img src="directory.png" alt="Directory Background" class="background">
 
-  <div class="clickable lobby" onclick="alert('Region 1 clicked')"></div>
-  <div class="clickable cert" onclick="alert('Region 2 clicked')"></div>
-  <div class="clickable resume" onclick="alert('Region 3 clicked')"></div>
-  <div class="clickable github" onclick="alert('Region 4 clicked')"></div>
-  <div class="clickable flag" onclick="alert('Region 5 clicked')"></div>
-  <div class="clickable about" onclick="alert('Region 6 clicked')"></div>
+  <div class="clickable lobby" onclick="window.location.href='lobby.html'"></div>
+  <div class="clickable cert" onclick="window.location.href='cert.html'"></div>
+  <div class="clickable resume" onclick="window.location.href='resume.html'"></div>
+  <div class="clickable github" onclick="visitGithub()"></div>
+  <div class="clickable flag" onclick="window.location.href='flag.html'"></div>
+  <div class="clickable about" onclick="window.location.href='about.html'"></div>
 </div>
+  <script>
+  function visitGithub() {
+    if (confirm('Visit site?')) {
+      window.open('https://github.com/JarrLane', '_blank');
+    }
+  }
+</script>
 
 </body>
 </html>
