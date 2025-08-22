@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Jarrett Website</title>
+  <style>
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .button-container {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+    }
+
+    .modern-button {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(135deg, #4b2e1f, #7b3f00);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .modern-button:hover {
+      background: linear-gradient(135deg, #5aa4f2, #208cff);
+    }
+  
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <img src="cert.png" alt="Interactive Background" class="image">
+
+  <div class="button-container">
+    <button class="modern-button" onclick="window.location.href='directory.html'">Directory</button>
+  </div>
+</div>
+
+</body>
+</html>
