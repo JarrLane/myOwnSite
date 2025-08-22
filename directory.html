@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Directory</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .background {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .clickable {
+      position: absolute;
+      cursor: pointer;
+      background-color: rgba(255, 0, 0, 0.3); 
+      transition: background-color 0.2s ease;
+    }
+
+    .clickable:hover {
+      background-color: rgba(255, 0, 0, 0.5);
+    }
+
+    .lobby { top: 10%; left: 10%; width: 15%; height: 15%; }
+    .cert { top: 10%; left: 30%; width: 15%; height: 15%; }
+    .resume { top: 10%; left: 50%; width: 15%; height: 15%; }
+    .github { top: 40%; left: 10%; width: 15%; height: 15%; }
+    .flag { top: 40%; left: 30%; width: 15%; height: 15%; }
+    .about { top: 40%; left: 50%; width: 15%; height: 15%; }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <img src="directory.png" alt="Directory Background" class="background">
+
+  <div class="clickable lobby" onclick="alert('Region 1 clicked')"></div>
+  <div class="clickable cert" onclick="alert('Region 2 clicked')"></div>
+  <div class="clickable resume" onclick="alert('Region 3 clicked')"></div>
+  <div class="clickable github" onclick="alert('Region 4 clicked')"></div>
+  <div class="clickable flag" onclick="alert('Region 5 clicked')"></div>
+  <div class="clickable about" onclick="alert('Region 6 clicked')"></div>
+</div>
+
+</body>
+</html>
