@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <title>The Jarrett Website</title>
   <style>
-    
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       overflow: hidden;
+      font-family: Arial, sans-serif;
     }
 
     .container {
@@ -22,56 +22,50 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-
-    .clickable {
       position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .button-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .modern-button {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(135deg, #4a90e2, #007aff);
+      border: none;
+      border-radius: 8px;
       cursor: pointer;
-
-      background-color: rgba(255, 0, 0, 0.3);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: all 0.2s ease-in-out;
     }
 
-    .certifications {
-      top: 55%;
-      left: 46.5%;
-      width: 10%;
-      height: 8%;
+    .modern-button:hover {
+      transform: translate(-50%, -50%) scale(1.05);
+      background: linear-gradient(135deg, #5aa4f2, #208cff);
     }
 
-    .resume{
-      top: 65%;
-      left: 46.5%;
-      width: 10%;
-      height: 8%;
-    }
-
-    .github{
-      top: 70%;
-      left: 46.5%;
-      width: 10%;
-      height: 8%;
-    }
-    .flag{
-      top: 77%;
-      left: 46.5%;
-      width: 10%;
-      height: 8%;
-    }
-    .about{
-      top: 60%;
-      left: 46.5%;
-      width: 10%;
-      height: 8%;
+    .modern-button:active {
+      transform: translate(-50%, -50%) scale(0.98);
     }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <img src="personalwebrender3.png" alt="Interactive" class="image">
+  <img src="lobby.png" alt="Interactive Background" class="image">
 
-  <div class="clickable region1" onclick="alert('You clicked Certifications')"></div>
-  <div class="clickable region2" onclick="alert('How do you spell flag?')"></div>
+  <div class="button-container">
+    <button class="modern-button" onclick="window.location.href='directory.html'">Directory</button>
+  </div>
 </div>
 
 </body>
